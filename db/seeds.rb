@@ -14,6 +14,12 @@ Post.create!(image:"https://img.freepik.com/foto-gratis/gato-rojo-o-blanco-i-est
 simple lo que realmente se sabe de los gatos y lo mucho que falta por entender. Es un libro que
 todo aquel que tenga o quiera tener un gato encontrará útil.", user_id: User.last.id)
 =end
+require 'faker'
+#User.create!(email: 'e@e.cl',password:'admin1234',role: 2)
 
-User.create!(email: 'c@c.cl',password:'$2a$12$vohIijGsaG4IW10OFS2Orud0WT4qLkf5Zn8M5wKGgkJKMwgfBQ9Ge',
-role: 1)
+while Category.count < 10
+  if !Category.pluck(:name).include?(Faker::Game.genre)
+    unique_name = Faker::Game.genre
+    Category.create(name: unique_name)
+  end
+end

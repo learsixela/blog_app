@@ -70,3 +70,5 @@ gem "popper_js", "~> 2.11"
 gem "sassc-rails", "~> 2.1"
 
 gem "figaro", "~> 1.2"
+
+gem "faker", "~> 3.4"

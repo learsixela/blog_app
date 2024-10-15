@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :products
+  resources :categories
   resources :posts#, except: [:index] 
   get "page/index"
   #devise_for :users

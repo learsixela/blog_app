@@ -31,3 +31,7 @@ gem install figaro
 bundle add figaro
 bundle exec figaro install
 
+******* Roles y Permisos ******
+rails g migration AddRoleToUsers role:integer
+
+\d users
